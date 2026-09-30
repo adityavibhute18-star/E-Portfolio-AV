@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Vibhute | Cinematic Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Aditya Vibhute - Computer Engineering Student, Frontend Developer, and Python Programmer crafting cinematic digital experiences and intelligent solutions.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Grain Overlay -->
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <!-- Full-Site Fixed Background Layer (Matches Reference Screenshot) -->
+    <div class="site-bg-container" id="siteBg">
+        <div class="site-bg-image" style="background-image: url('hero-bg.jpg');"></div>
+        <div class="stars-overlay"></div>
+        <div class="vignette-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-bold">AV</span>
+                <span class="logo-divider">|</span>
+                <span class="logo-sub">PORTFOLIO</span>
+            </a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li class="mobile-nav-header">
+                    <span class="mobile-nav-title">Navigation</span>
+                    <button class="close-menu" id="close-menu-btn" aria-label="Close menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Main Hero Content -->
+        <div class="hero-content">
+            <p class="hero-greeting fade-in-up">HELLO, I'M</p>
+            <h1 class="hero-name fade-in-up delay-1">Aditya Vibhute</h1>
+            <h2 class="hero-subtitle fade-in-up delay-2">
+                A <span class="typing" id="typing">Frontend Developer & Python Programmer</span>
+            </h2>
+            <div class="hero-roles-bar fade-in-up delay-2">
+                <span>Frontend Developer</span>
+                <span class="role-divider">|</span>
+                <span>Python Programmer</span>
+                <span class="role-divider">|</span>
+                <span>Machine Learning Enthusiast</span>
+            </div>
+            <p class="hero-description fade-in-up delay-3">
+                Computer Engineering Student passionate about building modern digital experiences and intelligent, data-driven solutions.
+            </p>
+            <div class="hero-cta-group fade-in-up delay-4">
+                <a href="#projects" class="btn btn-primary">
+                    Explore My Work <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+
+        <!-- Bottom Left Section (Matching Picture) -->
+        <div class="hero-bottom-left fade-in">
+            <div class="corner-tag">
+                <span class="tag-dot"></span>
+                <span class="tag-text">THE LONG VIEW</span>
+            </div>
+            <h3 class="corner-heading">
+                Every Goal Sharpens Focus, Momentum from a Team
+            </h3>
+            <p class="corner-italic">On the Rise.</p>
+        </div>
+
+        <!-- Bottom Right Section (Matching Picture) -->
+        <div class="hero-bottom-right fade-in">
+            <p class="corner-body">
+                Guided by clear goals and real progress, Ridge maps the climb, learns as you go, and turns effort into outcomes you can measure.
+            </p>
+            <a href="#about" class="btn-corner-action">
+                See How It Works <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Scroll Mouse Indicator (Matching Picture) -->
+        <a href="#about" class="scroll-mouse-container" aria-label="Scroll down to About section">
+            <div class="mouse-shape">
+                <span class="mouse-wheel"></span>
+            </div>
+            <span class="mouse-scroll-text">SCROLL</span>
+        </a>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section about-section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <span class="section-tag">ABOUT ME</span>
+                <h2 class="section-title">Beyond the <em class="editorial-accent">Code</em></h2>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text-card card-glass fade-in">
+                    <div class="card-corner-accent top-left"></div>
+                    <div class="card-corner-accent bottom-right"></div>
+                    
+                    <p class="lead-para">
+                        Hello! I'm a passionate developer who enjoys building modern and responsive websites using HTML and CSS, along with exploring intelligent solutions through Machine Learning.
+                    </p>
+                    <p>
+                        My journey began with learning the basics of web design, and over time I have developed projects that combine front-end development with smart, data-driven applications. My current focus is on creating user-friendly, efficient, and innovative digital solutions.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-code-branch highlight-icon"></i>
+                            <div>
+                                <h4>Front-End Excellence</h4>
+                                <p>Crafting sleek, responsive visual interfaces with clean code architectures.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-brain highlight-icon"></i>
+                            <div>
+                                <h4>Intelligent Systems</h4>
+                                <p>Leveraging Python and ML algorithms for real-world predictive solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-mountain-icon">
+                        <svg viewBox="0 0 100 25" class="mountain-outline-svg">
+                            <path d="M0,20 L20,10 L35,16 L55,5 L75,18 L100,8 L100,25 L0,25 Z" fill="none" stroke="var(--accent-teal)" stroke-width="1.5" opacity="0.6"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="about-visual-column fade-in delay-1">
+                    <div class="about-image-card card-glass">
+                        <img src="about-mountain.jpg" alt="Moonlit Snowy Mountain Landscape" class="about-mountain-img" />
+                        <div class="about-image-overlay"></div>
+                    </div>
+
+                    <div class="about-stats-row">
+                        <div class="stat-card card-glass">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+
+                        <div class="stat-card card-glass">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years Coding</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <span class="section-tag">SKILLS &amp; TECHNOLOGIES</span>
+                <h2 class="section-title">Skills &amp; <em class="editorial-accent">Technologies</em></h2>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="skills-categories-grid">
+                <!-- Category 1: Frontend Development -->
+                <div class="skill-category-card card-glass fade-in">
+                    <div class="category-header">
+                        <div class="category-icon-box">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <ul class="skills-chip-list">
+                        <li><i class="fa-brands fa-html5 html-icon"></i> HTML5</li>
+                        <li><i class="fa-brands fa-css3-alt css-icon"></i> CSS3</li>
+                        <li><i class="fa-brands fa-js js-icon"></i> JavaScript</li>
+                        <li><i class="fa-brands fa-php php-icon"></i> PHP</li>
+                        <li><i class="fa-brands fa-react react-icon"></i> React</li>
+                    </ul>
+                </div>
+
+                <!-- Category 2: Cloud Computing -->
+                <div class="skill-category-card card-glass fade-in delay-1">
+                    <div class="category-header">
+                        <div class="category-icon-box">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3>Cloud Computing</h3>
+                    </div>
+                    <ul class="skills-chip-list">
+                        <li><i class="fa-brands fa-python python-icon"></i> Python</li>
+                        <li><i class="fa-brands fa-github git-icon"></i> Git &amp; GitHub</li>
+                        <li><i class="fa-brands fa-linux linux-icon"></i> Linux</li>
+                        <li><i class="fa-brands fa-aws aws-icon"></i> AWS</li>
+                        <li><i class="fa-solid fa-cloud azure-icon"></i> AZURE</li>
+                        <li><i class="fa-brands fa-google gcp-icon"></i> Google Cloud Platform</li>
+                    </ul>
+                </div>
+
+                <!-- Category 3: Data Analyst -->
+                <div class="skill-category-card card-glass fade-in delay-2">
+                    <div class="category-header">
+                        <div class="category-icon-box">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3>Data Analyst</h3>
+                    </div>
+                    <ul class="skills-chip-list">
+                        <li><i class="fa-solid fa-table pandas-icon"></i> Pandas</li>
+                        <li><i class="fa-solid fa-file-excel excel-icon"></i> Microsoft Excel</li>
+                        <li><i class="fa-solid fa-database sql-icon"></i> SQL</li>
+                        <li><i class="fa-brands fa-python python-icon"></i> Python</li>
+                        <li><i class="fa-solid fa-brain ml-icon"></i> Machine Learning</li>
+                        <li><i class="fa-solid fa-chart-line stat-icon"></i> Statistical Analysis &amp; Modeling</li>
+                        <li><i class="fa-solid fa-calculator math-icon"></i> Math</li>
+                    </ul>
+                </div>
+
+                <!-- Category 4: Development Tools -->
+                <div class="skill-category-card card-glass fade-in delay-3">
+                    <div class="category-header">
+                        <div class="category-icon-box">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3>Development Tools</h3>
+                    </div>
+                    <ul class="skills-chip-list">
+                        <li><i class="fa-brands fa-google google-icon"></i> Google Developer Tools</li>
+                        <li><i class="fa-solid fa-book-open jupyter-icon"></i> Jupyter Notebook</li>
+                        <li><i class="fa-solid fa-code vscode-icon"></i> Visual Studio Code</li>
+                        <li><i class="fa-brands fa-android android-icon"></i> Android Studio</li>
+                        <li><i class="fa-solid fa-terminal cpp-icon"></i> Turbo C++</li>
+                        <li><i class="fa-solid fa-microchip ag-icon"></i> Antigravity</li>
+                        <li><i class="fa-solid fa-wand-magic-sparkles studio-icon"></i> Google AI Studio</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI Tools Sub-Section -->
+            <div class="ai-tools-wrapper fade-in">
+                <div class="ai-header">
+                    <i class="fa-solid fa-robot ai-main-icon"></i>
+                    <h3>AI Tools &amp; Productivity</h3>
+                </div>
+                
+                <div class="ai-tools-grid">
+                    <!-- ChatGPT -->
+                    <div class="ai-tool-card card-glass">
+                        <div class="ai-card-top">
+                            <div class="ai-icon-circle gpt-theme">
+                                <i class="fa-solid fa-comment-dots"></i>
+                            </div>
+                            <span class="ai-tag gpt-tag">Conversational</span>
+                        </div>
+                        <h4>ChatGPT</h4>
+                        <p>AI assistant for coding, logic building &amp; content drafting.</p>
+                    </div>
+
+                    <!-- Google Gemini -->
+                    <div class="ai-tool-card card-glass">
+                        <div class="ai-card-top">
+                            <div class="ai-icon-circle gemini-theme">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+                            <span class="ai-tag gemini-tag">Multimodal</span>
+                        </div>
+                        <h4>Google Gemini</h4>
+                        <p>Multimodal AI model for real-time search, code &amp; analysis.</p>
+                    </div>
+
+                    <!-- Claude -->
+                    <div class="ai-tool-card card-glass">
+                        <div class="ai-card-top">
+                            <div class="ai-icon-circle claude-theme">
+                                <i class="fa-solid fa-feather"></i>
+                            </div>
+                            <span class="ai-tag claude-tag">Analysis</span>
+                        </div>
+                        <h4>Claude</h4>
+                        <p>Advanced reasoning AI for technical writing &amp; code review.</p>
+                    </div>
+
+                    <!-- DeepSeek -->
+                    <div class="ai-tool-card card-glass">
+                        <div class="ai-card-top">
+                            <div class="ai-icon-circle ds-theme">
+                                <span>D</span>
+                            </div>
+                            <span class="ai-tag ds-tag">Reasoning</span>
+                        </div>
+                        <h4>DeepSeek</h4>
+                        <p>High-efficiency reasoning model for deep algorithm development.</p>
+                    </div>
+
+                    <!-- Blackbox AI -->
+                    <div class="ai-tool-card card-glass">
+                        <div class="ai-card-top">
+                            <div class="ai-icon-circle bb-theme">
+                                <i class="fa-solid fa-cube"></i>
+                            </div>
+                            <span class="ai-tag bb-tag">Dev Assistant</span>
+                        </div>
+                        <h4>Blackbox AI</h4>
+                        <p>Real-time code completion &amp; repository search engine.</p>
+                    </div>
+
+                    <!-- Perplexity -->
+                    <div class="ai-tool-card card-glass">
+                        <div class="ai-card-top">
+                            <div class="ai-icon-circle perplexity-theme">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                            <span class="ai-tag perplexity-tag">Search AI</span>
+                        </div>
+                        <h4>Perplexity</h4>
+                        <p>Information retrieval engine providing verified cited research.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Experience Section -->
+    <section id="education" class="section timeline-section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <span class="section-tag">MY JOURNEY</span>
+                <h2 class="section-title">Education &amp; <em class="editorial-accent">Experience</em></h2>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="timeline-columns-grid">
+                <!-- Education Column -->
+                <div class="timeline-column fade-in">
+                    <div class="column-title-box">
+                        <i class="fa-solid fa-graduation-cap col-icon"></i>
+                        <h3>Education</h3>
+                    </div>
+
+                    <div class="timeline-tree">
+                        <div class="timeline-node">
+                            <div class="node-dot"></div>
+                            <div class="node-content card-glass">
+                                <span class="node-date">2025 – 2028</span>
+                                <h4>BTech Computer Engineering</h4>
+                                <h5>Vidyalankar Institute of Technology</h5>
+                                <p>Pursuing Bachelor of Technology with focus on Computer Engineering, Data Structures, Software Engineering &amp; AI.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-node">
+                            <div class="node-dot"></div>
+                            <div class="node-content card-glass">
+                                <span class="node-date">2022 – 2025</span>
+                                <h4>Diploma in Computer Engineering</h4>
+                                <h5>Vidyalankar Polytechnic</h5>
+                                <p>Completed Diploma focusing on Web Development, Programming Fundamentals, Database Management, and Computer Graphics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Column -->
+                <div class="timeline-column fade-in delay-1">
+                    <div class="column-title-box">
+                        <i class="fa-solid fa-briefcase col-icon"></i>
+                        <h3>Experience</h3>
+                    </div>
+
+                    <div class="timeline-tree">
+                        <div class="timeline-node">
+                            <div class="node-dot"></div>
+                            <div class="node-content card-glass">
+                                <span class="node-date">2025 – PRESENT</span>
+                                <h4>Python Programmer &amp; Developer</h4>
+                                <h5>Self-Employed</h5>
+                                <p>Building machine learning scripts, data manipulation workflows, and full-stack web applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-node">
+                            <div class="node-dot"></div>
+                            <div class="node-content card-glass">
+                                <span class="node-date">JUNE 2024 – JULY 2024</span>
+                                <h4>Cybersecurity Intern</h4>
+                                <h5>Secure Cyber Future</h5>
+                                <p>Assisted in vulnerability assessment, web security scanning, and penetration testing fundamentals.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-node">
+                            <div class="node-dot"></div>
+                            <div class="node-content card-glass">
+                                <span class="node-date">JAN 2024 – MAR 2024</span>
+                                <h4>Web Development Intern</h4>
+                                <h5>Tech Solutions</h5>
+                                <p>Built responsive web pages using HTML, CSS, JavaScript, and PHP with MySQL database connectivity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resume CTA -->
+            <div class="resume-cta-wrapper fade-in">
+                <a href="resume.html" target="_blank" rel="noopener" class="btn btn-primary">
+                    View Full Resume <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <span class="section-tag">FEATURED PROJECTS</span>
+                <h2 class="section-title">Selected <em class="editorial-accent">Works</em></h2>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: AI Resume Screening System -->
+                <article class="project-card card-glass fade-in">
+                    <div class="project-preview-box">
+                        <div class="mock-visual mock-airesume">
+                            <div class="ar-window">
+                                <div class="ar-header">
+                                    <span>AI Resume Screener</span>
+                                    <span class="ar-badge">96% MATCH</span>
+                                </div>
+                                <div class="ar-card">
+                                    <span class="ar-name">Candidate Profile Analyzer</span>
+                                    <span class="ar-score">Skills Extracted: Python, ML, AWS, JS</span>
+                                    <div class="ar-skills">
+                                        <span class="ar-skill">NLP</span>
+                                        <span class="ar-skill">Cloud</span>
+                                        <span class="ar-skill">AI Screener</span>
+                                    </div>
+                                </div>
+                                <div class="ar-cloud">
+                                    <i class="fa-brands fa-aws"></i> AWS Cloud Integrated
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="view-project-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-meta">
+                            <span class="project-category">AI &amp; Cloud Solution</span>
+                        </div>
+                        <h3 class="project-title">AI Resume Screening System</h3>
+                        <p class="project-desc">
+                            An intelligent AI-powered resume screening system built with AWS cloud integration, evaluating candidate profiles, extracting key skills, and recommending roles using NLP and machine learning.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: WaterGuard AI -->
+                <article class="project-card card-glass fade-in delay-1">
+                    <div class="project-preview-box">
+                        <div class="mock-visual mock-waterguard">
+                            <div class="wg-window">
+                                <div class="wg-header">
+                                    <span>WaterGuard AI</span>
+                                    <span class="wg-status"><i class="fa-solid fa-droplet"></i> OPTIMAL</span>
+                                </div>
+                                <div class="wg-metrics">
+                                    <div class="wg-metric">
+                                        <small>pH Level</small>
+                                        <strong>7.2</strong>
+                                    </div>
+                                    <div class="wg-metric">
+                                        <small>Turbidity</small>
+                                        <strong>4.1 NTU</strong>
+                                    </div>
+                                    <div class="wg-metric">
+                                        <small>Purity</small>
+                                        <strong>98.4%</strong>
+                                    </div>
+                                </div>
+                                <div class="wg-graph">
+                                    <span class="wg-bar" style="height: 60%;"></span>
+                                    <span class="wg-bar" style="height: 85%;"></span>
+                                    <span class="wg-bar" style="height: 70%;"></span>
+                                    <span class="wg-bar" style="height: 95%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="view-project-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-meta">
+                            <span class="project-category">Machine Learning</span>
+                        </div>
+                        <h3 class="project-title">WaterGuard AI</h3>
+                        <p class="project-desc">
+                            Water Quality Prediction &amp; Machine Learning Approaches for Sustainable Resource Management, analyzing water parameter data to predict safety and contamination risks.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: A Color Picker With Images -->
+                <article class="project-card card-glass fade-in delay-2">
+                    <div class="project-preview-box">
+                        <div class="mock-visual mock-colorpicker">
+                            <div class="cp-header">
+                                <span class="cp-dot red"></span>
+                                <span class="cp-dot yellow"></span>
+                                <span class="cp-dot green"></span>
+                                <span class="cp-title">Color Picker App</span>
+                            </div>
+                            <div class="cp-body">
+                                <div class="cp-swatches">
+                                    <span style="background:#2dd4bf;" title="#2DD4BF"></span>
+                                    <span style="background:#38bdf8;" title="#38BDF8"></span>
+                                    <span style="background:#6366f1;" title="#6366F1"></span>
+                                    <span style="background:#f43f5e;" title="#F43F5E"></span>
+                                </div>
+                                <div class="cp-hex">HEX: #2DD4BF</div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="view-project-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-meta">
+                            <span class="project-category">Python Application</span>
+                        </div>
+                        <h3 class="project-title">A Color Picker With Images</h3>
+                        <p class="project-desc">
+                            A Python-based application that uses image processing techniques to implement an interactive color picker, allowing users to select and extract RGB and HEX values from images.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Image Processing</span>
+                            <span class="tech-tag">NumPy</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Car Game (Computer Graphics) -->
+                <article class="project-card card-glass fade-in">
+                    <div class="project-preview-box">
+                        <div class="mock-visual mock-cargame">
+                            <div class="cg-viewport">
+                                <div class="cg-road">
+                                    <div class="cg-lane"></div>
+                                    <div class="cg-lane"></div>
+                                </div>
+                                <div class="cg-car player-car">&#x1F697;</div>
+                                <div class="cg-car obstacle-1">&#x1F699;</div>
+                                <div class="cg-hud">SCORE: 480</div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="view-project-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-meta">
+                            <span class="project-category">Computer Graphics</span>
+                        </div>
+                        <h3 class="project-title">Car Game (Computer Graphics)</h3>
+                        <p class="project-desc">
+                            A 2D racing car game developed using Turbo C++ and computer graphics library (graphics.h), featuring road animations, collision detection, and score tracking.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Graphics.h</span>
+                            <span class="tech-tag">Turbo C++</span>
+                            <span class="tech-tag">Animation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: GovGuide -->
+                <article class="project-card card-glass fade-in delay-1">
+                    <div class="project-preview-box">
+                        <div class="mock-visual mock-govguide">
+                            <div class="gg-phone">
+                                <div class="gg-screen">
+                                    <div class="gg-app-bar">GovGuide App</div>
+                                    <div class="gg-item"><i class="fa-solid fa-clipboard-list"></i> Schemes</div>
+                                    <div class="gg-item"><i class="fa-solid fa-building-columns"></i> Services</div>
+                                    <div class="gg-action">Explore Portal</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="view-project-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-meta">
+                            <span class="project-category">Mobile Application</span>
+                        </div>
+                        <h3 class="project-title">GovGuide</h3>
+                        <p class="project-desc">
+                            Developed an Android application using Java and XML, focusing on intuitive UI design and efficient functionality with multilingual support to simplify government resource access.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Android (XML)</span>
+                            <span class="tech-tag">UI Design</span>
+                            <span class="tech-tag">Flutter</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: Snack Hub Website -->
+                <article class="project-card card-glass fade-in delay-2">
+                    <div class="project-preview-box">
+                        <div class="mock-visual mock-snackhub">
+                            <div class="sh-window">
+                                <div class="sh-nav">
+                                    <span class="sh-brand">🍔 Snack Hub</span>
+                                    <span class="sh-cart"><i class="fa-solid fa-cart-shopping"></i> (3)</span>
+                                </div>
+                                <div class="sh-items-grid">
+                                    <div class="sh-card">🍕 Pizza</div>
+                                    <div class="sh-card">🍟 Fries</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="view-project-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-meta">
+                            <span class="project-category">Full-Stack Web App</span>
+                        </div>
+                        <h3 class="project-title">Snack Hub Website</h3>
+                        <p class="project-desc">
+                            A dynamic food ordering website built with PHP and MySQL, featuring a full menu, cart management, and backend order tracking for a seamless food ordering experience.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 7: Hotel Management (Operating System) -->
+                <article class="project-card card-glass fade-in">
+                    <div class="project-preview-box">
+                        <div class="mock-visual mock-hotel">
+                            <div class="hm-window">
+                                <div class="hm-header">
+                                    <span>Hotel OS Manager</span>
+                                    <span class="hm-badge">CPU: FCFS / SJF</span>
+                                </div>
+                                <div class="hm-body">
+                                    <div class="hm-row"><span>Room 101: Checked In</span> <small>Process #1</small></div>
+                                    <div class="hm-row"><span>Room 102: Available</span> <small>Process #2</small></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="view-project-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-meta">
+                            <span class="project-category">System Programming</span>
+                        </div>
+                        <h3 class="project-title">Hotel Management (Operating System)</h3>
+                        <p class="project-desc">
+                            An Operating System concept-based hotel management system simulating room allocation, customer queue management, and process scheduling algorithms (FCFS/SJF).
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">OS Algorithms</span>
+                            <span class="tech-tag">Process Scheduling</span>
+                            <span class="tech-tag">Data Structures</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <span class="section-tag">GET IN TOUCH</span>
+                <h2 class="section-title">Let's Build Something <em class="editorial-accent">Meaningful</em></h2>
+                <p class="section-subtitle">
+                    Have an idea, a project, or an opportunity? I'd love to connect and explore what we can create together.
+                </p>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Info Column -->
+                <div class="contact-info-wrapper fade-in">
+                    <div class="contact-details-card card-glass">
+                        <h3>Contact Information</h3>
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <div class="contact-icon-box">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="item-label">Email</span>
+                                    <a href="mailto:adityavibhute18@gmail.com" class="item-value">adityavibhute18@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon-box">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="item-label">Location</span>
+                                    <span class="item-value">Dadar, Mumbai, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-socials-box">
+                            <span class="socials-title">CONNECT WITH ME</span>
+                            <div class="social-links-group">
+                                <a href="https://github.com/adityavibhute18-star" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/aditya-vibhute-13b185315/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="mailto:adityavibhute18@gmail.com" class="social-icon-btn" aria-label="Email Me">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Frame -->
+                    <div class="contact-map-card card-glass">
+                        <iframe
+                            title="Dadar Mumbai Location Map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.861!2d72.8478119!3d19.0177989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce5cd20bd20b%3A0x428a5650397b5bd0!2sDadar%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+                            width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div class="contact-form-wrapper card-glass fade-in delay-1">
+                    <h3>Send A Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="name" name="name" placeholder="Aditya Vibhute" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" id="email" name="email" placeholder="yourname@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-pen"></i>
+                                <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Collaboration">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <div class="input-with-icon textarea-icon">
+                                <i class="fa-solid fa-comment"></i>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or inquiry..." required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-bold">AV</span>
+                        <span class="logo-divider">|</span>
+                        <span class="logo-sub">PORTFOLIO</span>
+                    </a>
+                    <p>Aditya Vibhute — Computer Engineering Student &amp; Developer.</p>
+                </div>
+
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="https://github.com/adityavibhute18-star" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/aditya-vibhute-13b185315/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:adityavibhute18@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> Aditya Vibhute. All rights reserved.</p>
+                <p class="footer-tagline">Crafted with precision &amp; cinematic aesthetic.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Floating Button -->
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

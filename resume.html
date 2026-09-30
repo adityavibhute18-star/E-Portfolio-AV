@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Vibhute - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #070b14;
+            --bg-card: rgba(13, 20, 36, 0.7);
+            --sidebar-bg: #0b1220;
+            --accent-teal: #2dd4bf;
+            --accent-cyan: #38bdf8;
+            --text-bright: #ffffff;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .resume-action-bar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .btn-print {
+            background: rgba(45, 212, 191, 0.15);
+            color: var(--text-bright);
+            border: 1px solid rgba(45, 212, 191, 0.4);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-print:hover {
+            background: rgba(45, 212, 191, 0.3);
+            border-color: var(--accent-teal);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            display: flex;
+            max-width: 900px;
+            width: 100%;
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(45, 212, 191, 0.05);
+            overflow: hidden;
+            min-height: 1100px;
+        }
+
+        /* LEFT SIDEBAR */
+        .sidebar {
+            width: 35%;
+            background: var(--sidebar-bg);
+            color: var(--text-primary);
+            padding: 45px 30px;
+            border-right: 1px solid var(--border-subtle);
+        }
+
+        .sidebar h2 {
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--accent-teal);
+            border-bottom: 1.5px solid var(--border-subtle);
+            padding-bottom: 6px;
+            margin-top: 35px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+
+        .sidebar h2:first-child {
+            margin-top: 0;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            font-size: 0.83rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-primary);
+        }
+
+        .contact-info i {
+            font-size: 0.95rem;
+            color: var(--accent-teal);
+            width: 18px;
+            text-align: center;
+        }
+
+        .education-block {
+            margin-bottom: 20px;
+            font-size: 0.82rem;
+            line-height: 1.5;
+        }
+
+        .education-block .date {
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 4px;
+            font-size: 0.8rem;
+        }
+
+        .education-block .inst-title {
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-bright);
+            margin-bottom: 2px;
+            font-size: 0.85rem;
+        }
+
+        .education-block .degree {
+            text-transform: uppercase;
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+        }
+
+        .sidebar ul {
+            padding-left: 18px;
+            margin: 0;
+            font-size: 0.85rem;
+            line-height: 2.1;
+            color: var(--text-secondary);
+        }
+
+        .sidebar li {
+            font-weight: 500;
+        }
+
+        /* RIGHT CONTENT */
+        .content {
+            width: 65%;
+            padding: 50px 40px;
+            background: rgba(13, 20, 36, 0.4);
+        }
+
+        .header {
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .name {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--text-bright);
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .name span {
+            font-weight: 300;
+            color: var(--accent-teal);
+        }
+
+        .title {
+            color: var(--accent-cyan);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-top: 8px;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        .section-title {
+            color: var(--text-bright);
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 30px;
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--accent-teal);
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        .profile-text {
+            font-size: 0.88rem;
+            line-height: 1.65;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .experience-container {
+            border-left: 2px solid var(--border-subtle);
+            padding-left: 20px;
+            margin-left: 4px;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .job-header::before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 6px;
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-teal);
+            transform: rotate(45deg);
+        }
+
+        .job-company {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-bright);
+        }
+
+        .job-date {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+        }
+
+        .experience-item ul {
+            padding-left: 16px;
+            margin: 0;
+            font-size: 0.84rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .experience-item li {
+            margin-bottom: 4px;
+        }
+
+        .bottom-sections {
+            display: flex;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .bottom-col {
+            flex: 1;
+        }
+
+        .bottom-sections ul {
+            padding-left: 16px;
+            margin: 0;
+            font-size: 0.84rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .bottom-sections li {
+            margin-bottom: 6px;
+        }
+
+        /* Responsive & Print Styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar, .content {
+                width: 100%;
+            }
+            .bottom-sections {
+                flex-direction: column;
+            }
+        }
+
+        @media print {
+            body {
+                background: white !important;
+                color: #111827 !important;
+                padding: 0 !important;
+            }
+            .resume-action-bar {
+                display: none !important;
+            }
+            .container {
+                background: white !important;
+                color: #111827 !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
+            .sidebar {
+                background: #f8fafc !important;
+                color: #0f172a !important;
+                border-right: 1px solid #e2e8f0 !important;
+            }
+            .sidebar h2, .section-title, .job-company, .inst-title, .name {
+                color: #0f172a !important;
+            }
+            .date, .job-date, .title {
+                color: #0284c7 !important;
+            }
+            .text-secondary, .profile-text, .experience-item p, ul {
+                color: #334155 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume-action-bar">
+        <button onclick="window.print()" class="btn-print">
+            <i class="fa-solid fa-print"></i> Print Resume
+        </button>
+    </div>
+
+    <div class="container">
+
+        <!-- LEFT SIDEBAR -->
+        <div class="sidebar">
+
+            <h2>CONTACT</h2>
+            <div class="contact-info">
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 8808555584</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>adityavibhute18@gmail.com</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Dadar, Mumbai</span>
+                </div>
+            </div>
+
+            <h2>EDUCATION</h2>
+
+            <div class="education-block">
+                <div class="date">2025 - 2028</div>
+                <div class="inst-title">VIDYALANKAR INSTITUTE OF TECHNOLOGY</div>
+                <div class="degree">BACHELOR OF TECHNOLOGY - COMPUTER ENGINEERING</div>
+            </div>
+
+            <div class="education-block">
+                <div class="date">2022 - 2025</div>
+                <div class="inst-title">VIDYALANKAR POLYTECHNIC</div>
+                <div class="degree">DIPLOMA IN COMPUTER ENGINEERING</div>
+            </div>
+
+            <h2>SKILLS</h2>
+            <ul>
+                <li>Programming Languages</li>
+                <li>Database Management</li>
+                <li>AI &amp; Machine Learning</li>
+                <li>Cloud: AWS &amp; Azure</li>
+                <li>Google Colab &amp; Jupyter</li>
+                <li>Git Push &amp; Version Control</li>
+                <li>HTML5, CSS3 &amp; JavaScript</li>
+                <li>Python</li>
+            </ul>
+
+            <h2>LANGUAGES</h2>
+            <ul>
+                <li>English</li>
+                <li>Marathi</li>
+            </ul>
+
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="content">
+
+            <div class="header">
+                <div class="name">ADITYA <span>VIBHUTE</span></div>
+                <div class="title">STUDENT &amp; DEVELOPER</div>
+            </div>
+
+            <div class="section-title">PROFILE</div>
+            <div class="profile-text">
+                Motivated Computer Engineering student with strong programming and web development skills. Experienced
+                in system design and hands-on projects involving real-time data handling. Eager to apply knowledge in a
+                professional environment and contribute to innovative solutions.
+            </div>
+
+            <div class="section-title">WORK EXPERIENCE</div>
+
+            <div class="experience-container">
+                <div class="experience-item">
+                    <div class="job-header">
+                        <span class="job-company">Secure Cyber Future</span>
+                        <span class="job-date">JUNE 2024 - JULY 2024</span>
+                    </div>
+                    <ul>
+                        <li>Assisted in vulnerability assessments and penetration testing on web applications</li>
+                        <li>Worked with tools such as Burp Suite and SQLmap</li>
+                        <li>Gained practical experience in cybersecurity practices</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <span class="job-company">Web Development Intern</span>
+                        <span class="job-date">JAN 2024 - MAR 2024</span>
+                    </div>
+                    <ul>
+                        <li>Developed responsive web applications using Python, HTML, CSS, and JavaScript</li>
+                        <li>Worked on backend development and database integration with MySQL</li>
+                        <li>Collaborated with team members to debug and optimize application performance</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <span class="job-company">Python Programming Intern</span>
+                        <span class="job-date">MAY 2023 - JUN 2023</span>
+                    </div>
+                    <ul>
+                        <li>Created automation scripts and small projects using Python</li>
+                        <li>Applied libraries like Pandas and NumPy for data processing tasks</li>
+                        <li>Improved coding efficiency and problem-solving skills through real-world tasks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bottom-sections">
+                <div class="bottom-col">
+                    <div class="section-title" style="margin-top: 0;">CERTIFICATES</div>
+                    <ul>
+                        <li>Internship Certificate</li>
+                        <li>Introduction to Javascript</li>
+                        <li>Python Certificate</li>
+                        <li>Executive Diploma in Operations Management</li>
+                    </ul>
+                </div>
+
+                <div class="bottom-col">
+                    <div class="section-title" style="margin-top: 0;">FEATURED PROJECTS</div>
+                    <ul class="project-details" style="margin-bottom: 14px;">
+                        <li><strong>AI Resume Screening System</strong></li>
+                        <li>Skills: AWS, HTML, CSS, JS</li>
+                        <li>Result: Built an AI-powered resume screener integrated with AWS cloud services for automated skill extraction and profile matching.</li>
+                    </ul>
+                    <ul class="project-details">
+                        <li><strong>GovGuide App</strong></li>
+                        <li>Role: Team Lead and Developer</li>
+                        <li>Skills: Java, XML, Android Studio, UI/UX design</li>
+                        <li>Result: Improved accessibility of government resources with multilingual support.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
